@@ -93,19 +93,19 @@ public class DetailActivity extends AppCompatActivity {
                 mAlsoKnownAs.setVisibility(View.GONE);
                 mAlsoKnownAsLabel.setVisibility(View.GONE);
             }
-        mPlaceOfOrigin = (TextView) findViewById(R.id.origin_tv);
         mPlaceOfOriginLabel = (TextView) findViewById(R.id.place_of_origin_label);
-        if(!TextUtils.isEmpty(sandwich.getPlaceOfOrigin())){
-            mPlaceOfOrigin.setText(sandwich.getPlaceOfOrigin());
-        }else {
-            mPlaceOfOrigin.setVisibility(View.GONE);
-            mPlaceOfOriginLabel.setVisibility(View.GONE);
+        mPlaceOfOrigin = (TextView) findViewById(R.id.origin_tv);
+            if(!TextUtils.isEmpty(sandwich.getPlaceOfOrigin())){
+                mPlaceOfOrigin.setText(sandwich.getPlaceOfOrigin());
+            }else {
+                mPlaceOfOrigin.setVisibility(View.GONE);
+                mPlaceOfOriginLabel.setVisibility(View.GONE);
         }
 
-            mDescription = (TextView) findViewById(R.id.description_tv);
-            mDescription.setText(sandwich.getDescription());
+        mDescription = (TextView) findViewById(R.id.description_tv);
+        mDescription.setText(sandwich.getDescription());
 
-            mIngredients = (TextView) findViewById(R.id.ingredients_tv);
+        mIngredients = (TextView) findViewById(R.id.ingredients_tv);
             for (int i = 0; i < sandwich.getIngredients().size(); i++) {
                 mIngredients.append(sandwich.getIngredients().get(i) + "\n");
             }
